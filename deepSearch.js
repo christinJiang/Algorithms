@@ -18,6 +18,19 @@ function deepSearch(node) {
   }
 }
 
+function deepSearchRecursion(node) {
+  if (!!node) {
+    const nodeList = [];
+    nodeList.push(node.name)
+    const children = node.children;
+    if (children) {
+      for (let i = children.length - 1; i >= 0; i--) {
+        deepSearchRecursion(children[i])
+      }
+    }
+  } 
+}
+
 const node = {
   name: 'node',
   children: [
@@ -28,3 +41,6 @@ const node = {
 } 
 const nodes = deepSearch(node);
 console.log('nodes', nodes)
+
+const nodes2 = deepSearchRecursion(node);
+console.log('nodes2', nodes2)
