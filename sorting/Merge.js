@@ -43,6 +43,7 @@ const list = str?.split(' ');
 console.log('list', list)
 const sortedStr = mergeSort(list);
 console.log(sortedStr);
+// A E E L M O P R S T X
 
 // 0 1 2 3 4 5 6 7 8 9 10
 // S O R T E X A M P L E
