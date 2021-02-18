@@ -1,25 +1,25 @@
-const Node = value => ({
-  value,
+const Node = val => ({
+  val,
   next: null, 
 });
 
 var mergeTwoLists = function(l1, l2) {
   let node;
-  if (l1.value <= l2.value) {
-    node = Node(l1.value);
+  if (l1.val <= l2.val) {
+    node = Node(l1.val);
     l1 = l1.next;
   } else {
-    node = Node(l2.value);
+    node = Node(l2.val);
     l2 = l2.next;
   }
   const head = node;
   let p = node;
   while (l1 && l2) {
-    if (l1.value <= l2.value) {
-      node = Node(l1.value);
+    if (l1.val <= l2.val) {
+      node = Node(l1.val);
       l1 = l1.next;
     } else {
-      node = Node(l2.value);
+      node = Node(l2.val);
       l2 = l2.next;
     }
     p.next = node;
@@ -55,7 +55,7 @@ const mergeTwoLists2 = (l1, l2) => {
     return l2;
   } else if (!l2) {
     return l1;
-  } else if (l1.value <= l2.value) {
+  } else if (l1.val <= l2.val) {
     l1.next = mergeTwoLists2(l1.next, l2);
     return l1;
   } else {
@@ -71,12 +71,12 @@ const linkedListToArray = linkedList => {
   if (!linkedList) {
     return result;
   }
-  if (linkedList.value) {
-    result.push(linkedList.value);
+  if (linkedList.val) {
+    result.push(linkedList.val);
   }
   while (linkedList.next) {
     linkedList = linkedList.next;
-    result.push(linkedList.value);
+    result.push(linkedList.val);
   }
   return result;
 }
