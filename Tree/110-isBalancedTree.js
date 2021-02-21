@@ -10,9 +10,19 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isBalanced = function(root) {
-
+const isBalanced = function (root) {
+  if (!root) return true;
+  return Math.abs(height(root.left) - height(root.right)) <= 1
+    && isBalanced(root.left) && isBalanced(root.right);
 };
+
+const height = node => {
+  if (node === null || node.val === null) {
+    return 0;
+  }
+  return Math.max(height(node.left), height(node.right)) + 1;
+}
+
 const Node = val => ({
   val,
   left: null,
@@ -24,7 +34,7 @@ const createTree = array => {
     return null;
   }
   const list = [];
-  for (let i = 0; i < array.length; i ++) {
+  for (let i = 0; i < array.length; i++) {
     list.push(Node(array[i]));
   }
   for (let i = 0; i < array.length / 2; i++) {
@@ -45,6 +55,9 @@ const createTree = array => {
   return list[0];
 }
 
-const array = [3,9,20,null,null,15,7];
+const array = [3, 9, 20, null, null, 15, 7];
+// const array = [3,9,20,15,7,null,null,1];
 const treeResult = createTree(array);
-console.log('treeResult', JSON.stringify(treeResult));
+// console.log('treeResult', JSON.stringify(treeResult));
+const balancedResult = isBalanced(treeResult);
+console.log('balancedResult', balancedResult);
