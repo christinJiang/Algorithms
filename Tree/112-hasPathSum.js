@@ -12,7 +12,7 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, targetSum) {
-  if (root.val === null) {
+  if (!root || root.val === null) {
     return false;
   }
   if (root.left === null && root.right === null) {
@@ -35,7 +35,6 @@ const createTree = array => {
   });
   const length = array.length;
   for (let i = 0; i < length / 2; i++) {
-    console.log('i', i);
     if (2 * i + 1 < length) {
       const leftNode = list[2 * i + 1];
       if (leftNode.val !== null) {
