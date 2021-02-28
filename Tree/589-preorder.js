@@ -23,9 +23,9 @@
 
 const tree = {
   val: 1, 
-  children
+  children: [],
 }
-const preOrder = tree => {
+const preorder = tree => {
   let result = [];
   if (tree && tree.val !== null) {
     result.push(tree.val);
@@ -38,5 +38,5 @@ const preOrder = tree => {
   } 
   return result;
 }
-const result = preOrder(tree);
+const result = preorder(tree);
 console.log('result', result);
