@@ -7,7 +7,7 @@ var postorder = function(root) {
       result = result.concat(postorder(node));
     });
   }  
-  if (root.val !== null) {
+  if (root && root.val !== null) {
     result.push(root.val);
   }
   return result;
