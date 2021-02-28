@@ -1,7 +1,51 @@
 var lowestCommonAncestor = function(root, p, q) {
-    
+  if (!root || root.val === null || !p || p.val === null || !q || q.val === null) {
+    return null;
+  }
+  if (p.val < root.val && q.val < root.val) {
+    return lowestCommonAncestor(root.left, p, q);
+  } else if (p.val > root.val && q.val > root.val) {
+    return lowestCommonAncestor(root.right, p, q);
+  } else {
+    return root;
+  }
 };
-const array = [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5];
+const root = {
+  val: 6,
+  left: {
+    val: 2,
+    left: {
+      val: 0,
+    },
+    right: {
+      val: 4,
+      left: {
+        val: 3,
+      },
+      right: {
+        val: 5,
+      },
+    },
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 7,
+    },
+    right: {
+      val: 9,
+    },
+  },
+};
+const p = {
+  val: 3,
+}
+const q = {
+  val: 5,
+}
+const result = lowestCommonAncestor(root, p, q);
+console.log('result', JSON.stringify(result));
+/* const array = [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5];
 const Node = val => ({
   val,
   left: null,
@@ -32,4 +76,4 @@ const p = {
 const q = {
   val: 8,
 }
-const result = lowestCommonAncestor(tree, p, q);
+const result = lowestCommonAncestor(tree, p, q); */
