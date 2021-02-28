@@ -1,6 +1,34 @@
 var searchBST = function(root, val) {
-
+  if (root === null || root.val === null) {
+    return null;
+  }
+  if (root.val === val) {
+    return root;
+  } else if (val < root.val) {
+    return searchBST(root.left, val);
+  } else {
+    return searchBST(root.right, val);
+  }
 };
+const root = {
+  val: 4,
+  left: {
+    val: 2,
+    left: {
+      val: 1,
+    },
+    right: {
+      val: 3,
+    },
+  },
+  right: {
+    val: 7,
+  },
+};
+
+const result = searchBST(root, 3);
+console.log('result', JSON.stringify(result));
+
 const Node = val => ({
   val,
   left: null,
@@ -33,11 +61,9 @@ const createBST = array => {
 };
 
 // const array = [4, 2, 7, 1, 3];
-const array = [1,2,3,4,7];
-const tree = createBST(array);
-console.log('tree', JSON.stringify(tree));
-const result = searchBST(array, 2);
-console.log('result', JSON.stringify(result));
+// const array = [1,2,3,4,7];
+// const tree = createBST(array);
+// console.log('tree', JSON.stringify(tree));
 
 // var arr = [1,2,3,4];
 // var change = arr => {
