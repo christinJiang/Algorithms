@@ -1,5 +1,17 @@
 var findTarget = function(root, k) {
-    
+  const set = new Set();
+  const dfs = (root, k) => {
+    if (!root) {
+      return;
+    }
+    const hasTarget = set.has(k - root.val);
+    if (!set.has(root.val)) {
+      set.add(root.val);
+    }
+    if (!hasTarget) {
+      
+    }
+  }  
 };
 const root1 = {
   val: 5,
