@@ -16,7 +16,6 @@
 var threeSumClosest = function(nums, target) {
   let abs = Number.MAX_VALUE;
   let result;
-  console.log(abs);
   const len = nums.length;
   for (let i = 0; i < len - 2; i++) {
     for (let j = i + 1; j < len - 1; j ++) {
