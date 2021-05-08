@@ -53,8 +53,9 @@ function searchPath(beginPosition, result, stepCount) {
                 stepPath.push([result[j][0], result[j][1]]);
             }
             // console.log('result ', result);
-            result = [];
+           // result = [];
         }
+        return;
     }
 
     for (var i = 0; i< next.length; i++) {
