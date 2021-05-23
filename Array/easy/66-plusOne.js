@@ -33,6 +33,6 @@ var plusOne = function(digits) {
   let result = [1,...digits];
   return result;
 };
-const digits1 = [9];
+const digits1 = [4, 3, 2, 1]// [9];
 const result1 = plusOne(digits1);
 console.log(result1);
