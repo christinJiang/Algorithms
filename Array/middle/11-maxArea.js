@@ -24,6 +24,7 @@ n = height.length
 2 <= n <= 3 * 104
 0 <= height[i] <= 3 * 104
 */
+
 var maxArea = function(height) {
   let max = Number.MIN_VALUE;
   const n = height.length;
