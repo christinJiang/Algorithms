@@ -29,5 +29,5 @@ function bGap(n) {
   }
   return max;
 };
-const result = bGap(1041);
+const result = bGap(24);
 console.log('result', result);
