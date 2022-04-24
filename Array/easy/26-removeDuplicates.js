@@ -41,6 +41,17 @@ var removeDuplicates = function(nums) {
 const nums1 = [1,1,2];
 const length1 = removeDuplicates(nums1);
 console.log('length1', length1);
+console.log('nums1', nums1);
 const nums2 = [0,0,1,1,1,2,2,3,3,4];
 const length2 = removeDuplicates(nums2);
 console.log('length2', length2);
+console.log('nums2', nums2);
+
+function add(a) {
+  a= a+11;
+  return a;
+}
+let b = 10;
+let c = add(b);
+console.log('c', c);
+console.log('b', b);

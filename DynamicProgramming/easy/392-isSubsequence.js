@@ -17,7 +17,7 @@
 var isSubsequence = function(s, t) {
   let start = 0;
   for (let i = 0; i < s.length; i++) {
-    const index = t.indexOf(s.charAt(i, 1), start);
+    const index = t.indexOf(s.charAt(i), start);
     if (index > -1) {
       start = index + 1;
     } else {
@@ -26,5 +26,5 @@ var isSubsequence = function(s, t) {
   }
   return true;
 };
-const result = isSubsequence('axc', 'ahbgdc');
+const result = isSubsequence('ahc', 'ahbgdc');
 console.log(result);

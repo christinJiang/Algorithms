@@ -21,7 +21,9 @@ var moveZeroes = function(nums) {
         j++;
     }
   }
+  return nums;
 };
 const nums = [0,1,0,3,12];
 const nums1 = [1,2,3,1];
-moveZeroes1(nums1);
+const result = moveZeroes(nums);
+console.log(result);

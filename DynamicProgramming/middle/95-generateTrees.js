@@ -48,4 +48,5 @@ var generateTrees = function(n) {
 };
 
 const result1 = generateTrees(3);
+console.log(result1.length);
 console.log(result1);

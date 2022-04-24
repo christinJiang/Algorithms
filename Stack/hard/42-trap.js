@@ -38,12 +38,12 @@ var trap = function(height) {
   }
   return total;
 };
-const height = [];
-const result = trap(height);
-console.log(result);
-// const height = [0,1,0,2,1,0,1,3,2,1,2,1];
+// const height = [];
 // const result = trap(height);
 // console.log(result);
+const height = [0,1,0,2,1,0,1,3,2,1,2,1];
+const result = trap(height);
+console.log(result);
 // const height2 = [4,2,0,3,2,5];
 // const result2 = trap(height2);
 // console.log(result2);

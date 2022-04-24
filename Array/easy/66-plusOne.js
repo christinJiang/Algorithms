@@ -21,6 +21,7 @@
 var plusOne = function(digits) {
     //先遍历 从右向左
     for(let i = digits.length-1;i>=0;i--){
+        console.log('i', i);
       if(digits[i] !==9){
           digits[i]++
           return digits;
@@ -28,7 +29,7 @@ var plusOne = function(digits) {
           // 是 9
           digits[i] = 0
       }
-  }
+    }
 
   let result = [1,...digits];
   return result;
@@ -36,3 +37,6 @@ var plusOne = function(digits) {
 const digits1 = [4, 3, 2, 1]// [9];
 const result1 = plusOne(digits1);
 console.log(result1);
+const digits2 = [9, 9]// [9];
+const result2 = plusOne(digits2);
+console.log(result2);
